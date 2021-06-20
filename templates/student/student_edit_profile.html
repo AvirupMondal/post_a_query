@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row"> 
+      
+      <div class="img-block col-lg-4 offset-2">
+        <img class="img-fluid rounded " src="{% static 'images/editprofile.jpg' %} " alt="Login with your credentials">
+      </div>
+
+      <div class="editform col-lg-4 offset-1">
+        <h2>Edit Profile</h2>
+        <form action="" method="post">
+          <div class="inpuBox">
+            <label>Student Name</label>
+            <input type="text" name="edit_name" id="login_email" value="<?php echo $student_names;?>">
+          </div>
+          <div class="inpuBox">
+            <label >Student Email</label>
+            <input type="email" name="edit_email" id="login_password" value="<?php echo $student_emails;?>">
+          </div>
+          
+          <div class="inpuBox">
+            <label >College Name</label>
+            <input type="name" name="edit_college_name" id="login_password" value="<?php echo $student_college_names;?>">
+          </div>
+          <div class="inpuBox">
+            <label >College Id</label>
+            <input type="text" name="edit_college_id" id="login_password" value="<?php echo $student_college_ids;?>">
+          </div>
+          <div class="inpuBox">
+            <label >Year</label>
+            <input type="text" name="edit_year" id="login_password" value="<?php echo $student_years;?>">
+          </div>
+          <div class="inpuBox">
+            <label >Semester</label>
+            <input type="text" name="edit_semester" id="login_password" value="<?php echo $student_semesters;?>">
+          </div>
+          <div class="inpuBox">
+            <label >Stream</label>
+            <input type="text" name="edit_stream" id="login_password" value="<?php echo $student_streams;?>">
+          </div>
+          
+         
+          <button type="submit" class="btn btn-outline-primary" id="update_user_profile" name="submit">Update</button>
+        </form>
+        <div class="user-buttons">
+                   
+          <a class="btn btn-outline-primary" href="user_profile.php?id=<?php echo $Id?>" style="margin-bottom: 1rem; text-align: center;
+          margin-left: auto;">My Profile</a>
+         
+      </div>
+      </div>
+    
+     
+        
+        
+    </div>
+     
+  </div>
+  {% endblock main_content %}

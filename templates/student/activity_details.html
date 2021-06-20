@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row"> 
+       <div class="top"> 
+           <h3 class="top_left" >Welcome adadasd</h3>
+            <h4 class="top_right" ><a href="login.php">Log Out</a></h4>
+            <h4 class="top_right" ><a href="user_profile.php?id=<?php echo $student_id ?>">My Profile</a></h4>
+            <h4 class="top_right" ><a href="user_activities.php?id=<?php echo $student_id ?>"><i class="fas fa-arrow-circle-left"></i></a></h4>
+        </div>
+    </div>
+</div>
+
+<!--Question and Answer-->
+      <div class="container-fluid">
+          <div class="row">
+          
+
+              <div class="middle col-lg-7 offset-2 ">
+              <div class="info">
+                <em class="fas fa-user-circle"></em>
+                  <h5>Sl No. 1</h5>
+                  
+              </div>
+                <div class="question">
+                    <h6>Question</h6>
+                    <p>asdasdasd</p>
+                </div>
+                
+                
+                <div class="answer">
+                    <h6>Answer</h6>
+                    <div class="answerdisplay">
+                        <em class="fas fa-user-circle"></em>
+                        <div class="answers">
+                            <h6>dasdasd</h6>
+                            <h6>adadad</h6>
+                            <p>adadasd</p>
+                        </div>
+                    </div>
+                 
+
+                </div>
+            </div>
+         
+          </div>
+      </div>
+    {% endblock main_content %} 

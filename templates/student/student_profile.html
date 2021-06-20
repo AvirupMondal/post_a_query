@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row"> 
+       <div class="top"> 
+            <h4 class="top_right" ><a href="login.php">Log Out</a></h4>
+            <h4 class="top_right" ><a href="queries.php?id=<?php echo $Id ?>">Home</a></h4>
+        </div>
+    </div>
+</div>
+
+<!--Question and Answer-->
+      <div class="container-fluid">
+          <div class="row">
+            <div class="user-block">
+                <div class="user-img">
+                    <img class="img-fluid" src="{% static 'images/ID5907@2x.png' %} " alt="this is my image" >
+                    <form method="post" enctype="multipart/form-data">
+                    <input type="file" name="editimage" class="form-control" style="margin-top: 1rem; border: 1px #0275dB solid; margin-bottom:1rem" >
+                    <button type="submit" name="submit" class="btn btn-outline-primary" >Change Profile Picture</button>
+                    </form>
+                </div>
+                <div class="user-info col-lg-4">
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <th scope="col">Name: </th>
+                            <td>asdad</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Email: </th>
+                            <td>dasdasd</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">College: </th>
+                            <td>adasd</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">College Id: </th>
+                            <td>asdasd</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Stream: </th>
+                            <td>asdad</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Year: </th>
+                            <td>dasdad</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Semester: </th>
+                            <td>dadada</td>
+                        </tr>                
+                        
+                    </tbody>
+                    </table>
+                </div>
+                <div class="user-buttons">
+                    <a class="btn btn-outline-primary" href="change_password.php?id=<?php echo $_SESSION['Id']; ?>"> Change Password</a>
+                    <a class="btn btn-outline-success" href="user_edit_profile.php?id=<?php echo $_SESSION['Id']; ?>">Edit Profile</a>
+                    <a class="btn btn-outline-danger" href="user_activities.php?id=<?php echo $Id ?>">Your Activities</a>
+                </div>
+            </div>
+            
+          </div>
+      </div>
+   {% endblock main_content %}
